@@ -27,13 +27,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "winscp.com -command ""open ec2-user@${params.tomcat_dev} -privatekey=""""C:\Users\IanBradshaw\.ssh\tomcat-demo.ppk"""" ""put webapp\target*.war /var/lib/tomcat8/webapps"" ""exit"""
+                        bat "tomcat-deploy ${params.tomcat_dev}"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "winscp.com -command ""open ec2-user@${params.tomcat_prod} -privatekey=""""C:\Users\IanBradshaw\.ssh\tomcat-demo.ppk"""" ""put webapp\target*.war /var/lib/tomcat8/webapps"" ""exit"""
+                        bat "tomcat-deploy ${params.tomcat_prod}"
                     }
                 }
             }
