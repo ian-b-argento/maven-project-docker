@@ -9,7 +9,7 @@ pipeline {
 		 string(name: 'tomcat_dev', defaultValue: '18.224.95.241', description: 'Staging Server')
 		 string(name: 'tomcat_dev_hostkey', defaultValue: 'aa:ec:cb:f8:5d:f8:8b:03:b3:8c:73:ba:f4:65:91:39', description: 'AWS EC2 host key fingerprint for Staging')
          string(name: 'tomcat_prod', defaultValue: '18.224.214.188', description: 'Production Server')
-		 string(name: 'tomcat_prod_hostkey', defaultValue: 'ac:5d:e0:23:eb:16:32:d5:42:71:c3:ad:e1:70:f8:88', description: 'AWS EC2 host key fingerprint for Production')
+		 string(name: 'tomcat_prod_hostkey', defaultValue: 'U7b3j2Hye6ZnZCKzSi61lprCm8s3FsMcxRu7SUIT82E', description: 'AWS EC2 host key fingerprint for Production')
     }
 
     triggers {
