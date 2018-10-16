@@ -30,13 +30,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "tomcat-deploy ${params.tomcat_dev} ${params.hostkey_prefix} ${params.tomcat_dev_hostkey}"
+                        bat "tomcat-deploy ${params.tomcat_dev} ""${params.hostkey_prefix}"" ${params.tomcat_dev_hostkey}"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "tomcat-deploy ${params.tomcat_prod} ${params.hostkey_prefix} ${params.tomcat_prod_hostkey}"
+                        bat "tomcat-deploy ${params.tomcat_prod} ""${params.hostkey_prefix}"" ${params.tomcat_prod_hostkey}"
                     }
                 }
             }
